@@ -1,0 +1,8 @@
+# 電路學課本p321 Problem 7.92
+DC
+V 12 A D
+R 5 A B
+L 1 B C
+R 1 C D
+C 0.002 C D
+& D C B A

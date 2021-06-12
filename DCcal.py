@@ -8,7 +8,7 @@ def DCcalculator(NODE,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
     V = []
     N = copy.deepcopy(NODE)
 
-    SOURCE = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in SOURCE_pre]
+    SOURCE = [i if i[1]<i[2] else (-i[0],i[2],i[1]) for i in SOURCE_pre]
     R_LST = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in R_LST_pre]
     L_LST = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in L_LST_pre]
     C_LST = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in C_LST_pre]
