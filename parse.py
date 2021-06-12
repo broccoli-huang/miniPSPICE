@@ -320,7 +320,7 @@ s_w = x_u*(num_of_nodes+1) # scene width
 s_h = y_u*(pos_y+2) # scene height
 move = vec(x_u*1,y_u*1,0)
 
-scene = canvas(width=800, height=800, center=vec(s_w/2,s_h/2,0), background=vec(0.5,0.5,0))
+scene = canvas(width=800, height=800, center=vec(s_w/2,s_h/2,0), background=vec(0.74,0.98,0.79))
 
 for node in NODES:
     node.pos = vec(x_u*node.no,0,0)+move
