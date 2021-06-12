@@ -1,0 +1,9 @@
+# 電路學課本p365 Problem E8.17
+AC 159.1549431
+V 12 30 A D
+R 2 A B
+R 1 B D
+R 1 C D
+L 0.002 B D
+C 0.001 B C
+& A B C D // specify node display order (optional)

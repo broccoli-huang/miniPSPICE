@@ -1,0 +1,7 @@
+# 電路學課本p321 Problem7.96
+DC  // specify AC or DC
+V 12 A D // 12 Volts A+ D-
+R 1000 A B // 1000 Ohm
+C 0.000001 C D // 1 uF
+L 0.1 B C // 100 mH
+& A B C D // specify node display order (optional)
