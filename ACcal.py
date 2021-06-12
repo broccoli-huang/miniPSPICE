@@ -28,13 +28,13 @@ def ACcalculator(NODE,SOURCE,R_LST,L_LST,C_LST,freq):
         Y = 0 + 0j
         for R in R_LST:
             if R[1] == n or R[2] == n:
-                Y = Y + imp(R[1], R[2])
+                Y = Y+1/R[0]
         for L in L_LST:
             if L[1] == n or L[2] == n:
-                Y = Y + imp(L[1], L[2])
+                Y = Y-1/(2*PI*freq*L[0])*1j
         for C in C_LST:
             if C[1] == n or C[2] == n:
-                Y = Y + imp(C[1], C[2])
+                Y = Y+2*PI*freq*C[0]*1j
         return Y
 
 
