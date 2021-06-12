@@ -9,7 +9,7 @@ from ACcal import ACcalculator
 from DCcal import DCcalculator
 
 source_file = input("Input File:")
-f = open(source_file, "r")
+f = open(source_file, "r", encoding = "utf-8")
 input_str = f.read()
 f.close()
 
