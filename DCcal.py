@@ -82,8 +82,17 @@ def DCcalculator(NODE_pre,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
     if np.linalg.det(G) != 0:
         node_v = np.linalg.inv(G).dot(NODE_I.T).T
     else:
-        node_v[0] = SOURCE[0][0]
-        node_v[1] = 0
+        for i in n_removed:
+            for j in N:
+                if n_removed.index(i) < N.index(j):
+                    for v in V:
+                        if v[1] == i and v[2] == j:  #Find the target voltage.
+                            for r in R:
+                                if r[1] == i or r[1] == j or r[2] == i or r[2] == j:
+                                    G[N.index(j)][N.index(r[1])] = 0
+                                    G[N.index(j)][N.index(r[2])] = 0
+                            G[N.index(j)][N.index(SOURCE[0][2])] = 1
+        node_v = np.linalg.inv(G).dot(NODE_I.T).T
 
     for l in L_LST:
         for node in N:
