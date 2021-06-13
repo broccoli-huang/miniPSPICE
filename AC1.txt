@@ -1,9 +1,9 @@
 # 電路學課本p365 Problem E8.17
-AC 159.1549431
-V 12 30 A D
-R 2 A B
-R 1 B D
-R 1 C D
-L 0.002 B D
-C 0.001 B C
+AC 159.1549431 // specify AC, freq = 159.15
+V 12 30 A D // Voltage source 12V <30, A+ D-
+R 2 A B // R 2 Ohm
+R 1 B D // R 1 Ohm
+R 1 C D // R 1 Ohm
+L 0.002 B D // L 2mH
+C 0.001 B C  // C 1mF
 & A B C D // specify node display order (optional)

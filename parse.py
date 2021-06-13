@@ -1,7 +1,6 @@
 # parse input.txt
 import copy
 import sys
-import random as rand
 from vpython import *
 import numpy as np
 import math
@@ -142,7 +141,7 @@ UNIT = {
 
 class component:
     def __init__(self,typ,tup,no,type_no):
-        #no,typ,type_no,val,(phase),display,start,end,width 
+        #no,typ,type_no,tup,val,(phase),display,start,end,width 
         self.no = no  #component number
         self.typ = typ  #type:S,R,L,C
         self.type_no = type_no  #component number of the type
@@ -203,6 +202,8 @@ for tup in C_LST:
 for N in NODES:
     N.desti.sort(key=lambda x: x.width)
 
+
+#placement
 remain_no = component_no
 
 pos_x = 0
