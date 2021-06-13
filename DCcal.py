@@ -66,8 +66,8 @@ def DCcalculator(NODE_pre,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
                         G[N.index(i)][N.index(j)] = -1/r[0]
  
     for i in n_removed:
-        for j in n_removed:   #if n_removed.index(i) < n_removed.index(j):
-            if n_removed.index(i) < n_removed.index(j):
+        for j in N:   #if n_removed.index(i) < n_removed.index(j):
+            if n_removed.index(i) < N.index(j):
                 for v in V:
                     if v[1] == i and v[2] == j:  #Find the target voltage.
                         G[N.index(i)][N.index(i)] = 1
