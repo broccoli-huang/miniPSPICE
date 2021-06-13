@@ -1,0 +1,8 @@
+# Picture is on Messenger
+DC
+V 7 A E
+V 1 B C
+R 5 A B
+R 1 C D
+R 3 D E
+& A B C D E
