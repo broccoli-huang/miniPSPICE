@@ -53,7 +53,7 @@ def DCcalculator(NODE_pre,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
     G = np.zeros((len(N), len(N)))
 
     for i in n_left:
-        for j in n_left:
+        for j in N:
             if i == j:
                 for r in R:
                     if r[1] == i or r[2] == i:
