@@ -1,11 +1,13 @@
 import numpy as np
 import copy
 
-def DCcalculator(NODE,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
+def DCcalculator(NODE_pre,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
     R = []
     V = []
-    N = copy.deepcopy(NODE)
 
+    NODE = sorted(NODE_pre)
+    N = copy.deepcopy(NODE)
+    
     SOURCE = [i if i[1]<i[2] else (-i[0],i[2],i[1]) for i in SOURCE_pre]
     R_LST = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in R_LST_pre]
     L_LST = [i if i[1]<i[2] else (i[0],i[2],i[1]) for i in L_LST_pre]
@@ -94,5 +96,9 @@ def DCcalculator(NODE,SOURCE_pre,R_LST_pre,L_LST_pre,C_LST_pre):
     v_ground = NODE_V[NODE.index(node_ground)]
     NODE_V -= v_ground
     #print(NODE_V)
-    return NODE_V
+
+    NODE_V_ret = []
+    for i in NODE_pre:
+        NODE_V_ret.append(NODE_V[NODE.index(i)])
+    return NODE_V_ret
         
